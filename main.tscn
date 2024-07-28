@@ -1,19 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://wshd6qwprk65"]
+[gd_scene load_steps=5 format=3 uid="uid://wshd6qwprk65"]
 
 [ext_resource type="PackedScene" uid="uid://512un3x4y1l7" path="res://mob.tscn" id="1_l4tr0"]
 [ext_resource type="Script" path="res://main.gd" id="1_m0n4u"]
 [ext_resource type="PackedScene" uid="uid://brt8t1mrwfskx" path="res://player.tscn" id="2_i8432"]
+[ext_resource type="PackedScene" uid="uid://rrbx4rpjc251" path="res://tile_map.tscn" id="4_8on7s"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_m0n4u")
 
 [node name="Player" parent="." instance=ExtResource("2_i8432")]
+z_index = 1
+position = Vector2(53, 54)
+scale = Vector2(0.25, 0.25)
 
 [node name="Mob" parent="." instance=ExtResource("1_l4tr0")]
-position = Vector2(603, 545)
+position = Vector2(879, 531)
+scale = Vector2(0.4, 0.4)
 
 [node name="PlayerStartPosition" type="Marker2D" parent="."]
-position = Vector2(100, 100)
+position = Vector2(52, 56)
 
 [node name="BallStartPosition" type="Marker2D" parent="."]
-position = Vector2(350, 350)
+position = Vector2(857, 509)
+
+[node name="TileMap" parent="." instance=ExtResource("4_8on7s")]
+collision_animatable = true

@@ -2,7 +2,7 @@ extends Area2D
 
 signal hit
 
-@export var speed = 400 # How fast the player will move (pixels/sec).
+@export var speed = 100 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 
 # Called when the node enters the scene tree for the first time.
@@ -31,13 +31,10 @@ func _process(delta):
 	position = position.clamp(Vector2.ZERO, screen_size)
 
 func _on_body_entered(body):
-	hide() # Player disappears after being hit.
+	#hide() # Player disappears after being hit.
 	print("HIT")
 	hit.emit()
-	# Must be deferred as we can't change physics properties on a physics callback.
-	$CollisionShape2D.set_deferred("disabled", true)
 
 func start(pos):
 	position = pos
 	show()
-	$CollisionShape2D.disabled = false
