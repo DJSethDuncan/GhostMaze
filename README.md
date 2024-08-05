@@ -9,5 +9,5 @@ You must ghost your way through walls to make it to the end of the maze, but eve
 
 ChangeLog
 
-1.1 - new sprites (ghost + portal)
-1.0 - first stable
+* 1.1 - new sprites (ghost + portal)
+* 1.0 - first stable
