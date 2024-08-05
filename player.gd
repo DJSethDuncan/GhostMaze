@@ -5,7 +5,7 @@ signal update_health(health)
 signal win
 signal die
 
-@export var speed = 100 # How fast the player will move (pixels/sec).
+@export var speed = 300 # How fast the player will move (pixels/sec).
 
 var active = true # Is gameplay active
 var screen_size # Size of the game window.
@@ -49,6 +49,8 @@ func _on_body_entered(body):
 	
 func start(pos):
 	position = pos
+	active = true
+	player_health = 10
 	show()
 
 func _on_goal_area_entered(area):

@@ -11,5 +11,8 @@ func _process(delta):
 func new_game():
 	$Player.start($PlayerStartPosition.position)
 	$Goal.start($BallStartPosition.position)
+	$HUD.start()
 
-
+func _on_restart_button_pressed():
+	new_game()
+	pass # Replace with function body.
