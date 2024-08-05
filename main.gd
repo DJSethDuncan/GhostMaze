@@ -10,6 +10,6 @@ func _process(delta):
 
 func new_game():
 	$Player.start($PlayerStartPosition.position)
-	$Mob.start($BallStartPosition.position)
+	$Goal.start($BallStartPosition.position)
 
 

@@ -2,9 +2,12 @@ extends Area2D
 
 signal hit
 signal update_health(health)
+signal win
+signal die
 
 @export var speed = 100 # How fast the player will move (pixels/sec).
 
+var active = true # Is gameplay active
 var screen_size # Size of the game window.
 var player_health = 10
 
@@ -14,7 +17,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if player_health > 0:
+	if active:
 		var velocity = Vector2.ZERO # The player's movement vector.
 		if Input.is_action_pressed("ui_right"):
 			velocity.x += 1
@@ -40,7 +43,15 @@ func _on_body_entered(body):
 	player_health -= 1
 	hit.emit()
 	update_health.emit(player_health)
+	if player_health <= 0:
+		die.emit()
+		active = false;
 	
 func start(pos):
 	position = pos
 	show()
+
+func _on_goal_area_entered(area):
+	active = false;
+	win.emit()
+	pass # Replace with function body.
