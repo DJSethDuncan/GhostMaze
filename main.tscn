@@ -1,12 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://wshd6qwprk65"]
+[gd_scene load_steps=6 format=3 uid="uid://wshd6qwprk65"]
 
 [ext_resource type="PackedScene" uid="uid://512un3x4y1l7" path="res://mob.tscn" id="1_l4tr0"]
 [ext_resource type="Script" path="res://main.gd" id="1_m0n4u"]
+[ext_resource type="Script" path="res://HUD.gd" id="2_35vap"]
 [ext_resource type="PackedScene" uid="uid://brt8t1mrwfskx" path="res://player.tscn" id="2_i8432"]
 [ext_resource type="PackedScene" uid="uid://rrbx4rpjc251" path="res://tile_map.tscn" id="4_8on7s"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_m0n4u")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("2_35vap")
+
+[node name="Health" type="Label" parent="HUD"]
+offset_left = 1020.0
+offset_top = 14.0
+offset_right = 1122.0
+offset_bottom = 62.0
 
 [node name="Player" parent="." instance=ExtResource("2_i8432")]
 z_index = 1
