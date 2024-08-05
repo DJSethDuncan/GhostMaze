@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://brt8t1mrwfskx"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_rwyun"]
-[ext_resource type="Texture2D" uid="uid://ncorhrif731j" path="res://icon.svg" id="2_vxhhe"]
+[ext_resource type="Texture2D" uid="uid://ncorhrif731j" path="res://assets/icon.svg" id="2_yp8xm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6svvl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vxhhe")
+"texture": ExtResource("2_yp8xm")
 }],
 "loop": true,
 "name": &"move",
