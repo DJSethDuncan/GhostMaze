@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://msk5wh36fi2h"]
 
 [ext_resource type="Script" path="res://goal.gd" id="1_re67q"]
-[ext_resource type="Texture2D" uid="uid://dhwux2226ecam" path="res://assets/53283.png" id="2_o3jbt"]
+[ext_resource type="Texture2D" uid="uid://bujbnke1vimdl" path="res://assets/tile_0129.png" id="2_cw660"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j2khp"]
 radius = 27.0185
@@ -10,8 +10,9 @@ radius = 27.0185
 script = ExtResource("1_re67q")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_o3jbt")
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_cw660")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_j2khp")

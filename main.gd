@@ -10,7 +10,7 @@ func _process(delta):
 
 func new_game():
 	$Player.start($PlayerStartPosition.position)
-	$Goal.start($BallStartPosition.position)
+	$Goal.start($GoalStartPosition.position)
 	$HUD.start()
 
 func _on_restart_button_pressed():
